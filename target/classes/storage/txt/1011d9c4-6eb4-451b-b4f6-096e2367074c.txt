@@ -1,0 +1,1 @@
+Endereco{cep='68459-240', logradouro='Travessa Monte Alegre', bairro='Jardim São Francisco das Chagas', localidade='Tucuruí', complemento='', uf='PA', ddd='94'}
