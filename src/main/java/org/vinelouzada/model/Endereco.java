@@ -3,7 +3,7 @@ package org.vinelouzada.model;
 import org.vinelouzada.dto.EnderecoDto;
 
 public class Endereco {
-    private String cep;
+    private Cep cep;
     private String logradouro;
     private String bairro;
     private String localidade;
@@ -12,7 +12,7 @@ public class Endereco {
     private String ddd;
 
     public Endereco(EnderecoDto dto){
-        this.cep = dto.cep();
+        this.cep = new Cep(dto.cep().replace("-",""));
         this.logradouro = dto.logradouro();
         this.bairro = dto.bairro();
         this.localidade = dto.localidade();
@@ -21,7 +21,7 @@ public class Endereco {
         this.ddd = dto.ddd();
     }
 
-    public String cep(){
+    public Cep cep(){
         return this.cep;
     }
 
@@ -52,6 +52,6 @@ public class Endereco {
     @Override
     public String toString() {
         return String.format("Endereco{cep='%s', logradouro='%s', bairro='%s', localidade='%s', complemento='%s', uf='%s', ddd='%s'}",
-                cep, logradouro, bairro, localidade, complemento, uf, ddd);
+                cep.numero(), logradouro, bairro, localidade, complemento, uf, ddd);
     }
 }

@@ -2,7 +2,7 @@ package org.vinelouzada.model;
 
 public class Cep {
 
-    private String cep;
+    private String numero;
 
     public Cep (String cep){
 
@@ -10,10 +10,10 @@ public class Cep {
             throw new IllegalArgumentException("Cep inválido");
         }
 
-        this.cep = cep;
+        this.numero = cep;
     }
 
     public String numero(){
-        return this.cep;
+        return this.numero;
     }
 }
